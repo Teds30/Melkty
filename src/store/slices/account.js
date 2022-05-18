@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const initial_id = localStorage.getItem('account_id')
+const initial_id = localStorage.getItem('account_id') || '09662177561'
 
 const initialAccountState = {
     account_id: initial_id,
