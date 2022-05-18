@@ -1,0 +1,46 @@
+li {
+    list-style-type: none;
+}
+.collections {
+    display: flex;
+    margin-bottom: 2em;
+    gap: 1em;
+}
+
+.collection {
+    width: 14em;
+    font-family: 'Montserrat';
+}
+
+.collection h1 {
+    line-height: 1.5em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    word-wrap: break-word;
+}
+
+.collection button {
+    margin-top: 2em;
+    border: 3px solid #414141;
+    padding: 0.7em 1em;
+    background-color: transparent;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.slide {
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.slide:hover,
+.slide:focus {
+    box-shadow: inset 8.5em 0 0 0 var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}

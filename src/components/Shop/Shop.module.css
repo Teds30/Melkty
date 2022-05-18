@@ -1,0 +1,21 @@
+.shop {
+    padding: 2em 5em;
+}
+
+.summary {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3em;
+}
+
+.summary h3 {
+    float: left;
+}
+.line {
+    flex-grow: 1;
+    margin-left: 1em;
+    /* width: 20em; */
+    height: 2px;
+    background: #ccc;
+}
+

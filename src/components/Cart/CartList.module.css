@@ -1,0 +1,11 @@
+.list li {
+    list-style-type: none;
+    border-bottom: 1px solid #00000030;
+    padding: 1em;
+}
+
+.cart-items-container {
+    border-radius: 8px;
+    border: 1px solid #00000080;
+    /* padding: 2em; */
+}

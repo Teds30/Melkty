@@ -1,0 +1,12 @@
+.products-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+}
+
+.products-container ul {
+    list-style-type: none;
+}

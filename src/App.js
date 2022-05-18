@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { useSelector } from 'react-redux'
+
+import Cart from './components/Cart/Cart'
+import Shop from './components/Shop/Shop'
+import Login from './components/Auth/Login'
+import Checkout from './components/Checkout/Checkout'
+import Layout from './components/Layout/Layout'
+
+const App = () => {
+    const account = useSelector((state) => state.account)
+
+    const acc_id = account.account_id
+
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Navigate to="/shop" />} />
+                <Route path="/cart" element={<Cart />}></Route>
+                <Route path="/checkout" element={<Checkout />}></Route>
+                <Route
+                    path="/shop"
+                    element={
+                        <Layout>
+                            <Shop />
+                        </Layout>
+                    }
+                />
+                {!acc_id && <Route path="/login" element={<Login />} />}
+                {acc_id && (
+                    <Route path="/login" element={<Navigate to="/shop" />} />
+                )}
+                <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+        </BrowserRouter>
+    )
 }
 
-export default App;
+export default App

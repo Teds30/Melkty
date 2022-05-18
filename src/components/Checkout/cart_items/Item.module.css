@@ -1,0 +1,38 @@
+
+.item {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    padding: 1em;
+}
+
+.col1 {
+    flex: 2;
+    display: flex;
+    gap: 1em;
+}
+.item__image {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+}
+
+.col2 {
+    flex: 1;
+}
+
+.item__content div {
+    margin-top: 1em;
+    /* padding: 0.2em 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    width: max-content; */
+}
+
+.col3 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 1.2em;
+}
