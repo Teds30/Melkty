@@ -121,6 +121,7 @@ const CartDrawer = (props) => {
                 await submitOrderItems()
                 dispatch(cartActions.clearCart())
                 alert('Order Success!')
+                console.log('Order Success!')
             } catch (err) {
                 console.log(err)
             }
